@@ -12,6 +12,7 @@ import { useCurrentUser } from "@/hooks/use-current-user";
 import { can, type Role } from "@/lib/permissions";
 
 const ROLE_LABEL: Record<string, string> = {
+  USER: "Basic user — no administrative functions",
   ADMIN_L1: "Level 1 — can add paint information",
   ADMIN_L2: "Level 2 — can add and update paint information",
   ADMIN_L3: "Level 3 — full administrative access",
@@ -52,7 +53,7 @@ export default function AdminPage() {
             Managing paint information as {user?.username}
             <Badge variant="secondary">{role.replace("ADMIN_", "Level ")}</Badge>
           </p>
-          <p className="mt-2 text-sm text-muted-foreground">{ROLE_LABEL[role] ?? ROLE_LABEL.ADMIN_L3}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{ROLE_LABEL[role] ?? ROLE_LABEL.USER}</p>
         </div>
 
         <Separator />

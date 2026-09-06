@@ -34,7 +34,8 @@ export default function LoginPage() {
         return;
       }
       toast.success(`Signed in as ${username}`);
-      router.push("/admin");
+      const isAdmin = body.data!.role.startsWith("ADMIN_");
+      router.push(isAdmin ? "/admin" : "/");
       router.refresh();
     } catch {
       setError("Unexpected error during sign in.");
