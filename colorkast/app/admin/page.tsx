@@ -25,7 +25,7 @@ export default function AdminPage() {
   const card = (href: string, Icon: ComponentType<{ className?: string }>, title: string, desc: string, available: boolean) => (
     <Card className={`p-5 ${available ? "transition-shadow hover:shadow-md" : "opacity-50"}`}>
       <div className="flex items-start gap-4">
-        <div className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${available ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>
+        <div className={`flex size-10 shrink-0 items-center justify-center ${available ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>
           <Icon className="size-5" />
         </div>
         <div className="min-w-0">
@@ -47,7 +47,7 @@ export default function AdminPage() {
     <RequireAuth>
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Administration</h1>
+          <h1 className="text-3xl">Administration</h1>
           <p className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
             <ShieldCheck className="size-4" />
             Managing paint information as {user?.username}

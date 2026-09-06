@@ -4,7 +4,6 @@ import type { ComponentType } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  Droplets,
   Home,
   Search,
   ArrowRightLeft,
@@ -67,13 +66,17 @@ export function AppSidebar({ user }: { user: { username: string; role: Role } | 
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" asChild>
-                <Link href="/" className="gap-2">
-                  <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                    <Droplets className="size-4" />
+                <Link href="/" className="gap-2.5">
+                  <div className="flex size-8 overflow-hidden border border-sidebar-border">
+                    <span className="h-full w-1/3 bg-[#c45c32]" />
+                    <span className="h-full w-1/3 bg-[#e2b84a]" />
+                    <span className="h-full w-1/3 bg-[#3d6b4e]" />
                   </div>
                   <div className="grid leading-tight">
-                    <span className="font-semibold tracking-tight">ColorKast</span>
-                    <span className="text-[11px] text-muted-foreground">ABC Paint</span>
+                    <span className="font-heading text-base tracking-tight">ColorKast</span>
+                    <span className="text-[11px] tracking-wide text-sidebar-foreground/60">
+                      ABC Paint
+                    </span>
                   </div>
                 </Link>
               </SidebarMenuButton>
@@ -104,7 +107,7 @@ export function AppSidebar({ user }: { user: { username: string; role: Role } | 
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton size="sm" disabled>
-                <span className="text-[11px] text-muted-foreground">
+                <span className="text-[11px] text-sidebar-foreground/55">
                   {user ? `Signed in as ${user.username} (${user.role})` : "Signed out"}
                 </span>
               </SidebarMenuButton>

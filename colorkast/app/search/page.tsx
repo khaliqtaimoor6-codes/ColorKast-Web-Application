@@ -80,7 +80,7 @@ export default function SearchPage() {
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight">Color Search</h1>
+        <h1 className="text-3xl">Color Search</h1>
         <p className="mt-1 text-sm text-muted-foreground">
           Locate colors by paint name, paint number, or RGB value — in any collection.
         </p>

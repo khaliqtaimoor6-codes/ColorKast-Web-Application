@@ -77,7 +77,7 @@ export default function TranslatePage() {
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight">Color Number Translator</h1>
+        <h1 className="text-3xl">Color Number Translator</h1>
         <p className="mt-1 text-sm text-muted-foreground">
           Enter an old-scheme number to see its equivalent in the new numbering scheme.
         </p>

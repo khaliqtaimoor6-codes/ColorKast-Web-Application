@@ -14,7 +14,7 @@ export function PaintSwatch({ r, g, b, size = 48, showValues, className }: Paint
   return (
     <div className={`flex items-center gap-3 ${className ?? ""}`}>
       <div
-        className="shrink-0 rounded-lg border shadow-sm"
+        className="paint-chip shrink-0 rounded-sm border border-black/10"
         style={{ width: size, height: size, backgroundColor: `rgb(${r}, ${g}, ${b})` }}
         aria-label={`Color swatch RGB ${r}, ${g}, ${b}`}
       />

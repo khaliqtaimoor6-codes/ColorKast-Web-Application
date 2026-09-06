@@ -117,7 +117,7 @@ export default function ManageUsersPage() {
     <RequireAuth permission="users:manage">
       <div className="mx-auto flex w-full max-w-3xl flex-col gap-6">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Manage Admin Users</h1>
+          <h1 className="text-3xl">Manage Admin Users</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             Create administrative users. Per the SRS, you may create users at or below your own
             level.

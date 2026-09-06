@@ -125,7 +125,7 @@ export default function UpdatePaintPage() {
     <RequireAuth permission="paint:update">
       <div className="mx-auto flex w-full max-w-2xl flex-col gap-6">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Update Paint</h1>
+          <h1 className="text-3xl">Update Paint</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             Choose a paint record, edit its details, and save.
           </p>

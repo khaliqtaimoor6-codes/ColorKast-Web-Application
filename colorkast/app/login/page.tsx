@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Droplets, Loader2, ShieldAlert } from "lucide-react";
+import { Loader2, ShieldAlert } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -47,23 +47,31 @@ export default function LoginPage() {
   return (
     <div className="mx-auto flex w-full max-w-md flex-col justify-center py-8 md:py-16">
       <div className="mb-6 flex flex-col items-center gap-3 text-center">
-        <div className="flex size-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow">
-          <Droplets className="size-6" />
+        <div className="flex h-10 w-24 overflow-hidden border">
+          <span className="h-full w-1/3 bg-[#c45c32]" />
+          <span className="h-full w-1/3 bg-[#e2b84a]" />
+          <span className="h-full w-1/3 bg-[#3d6b4e]" />
         </div>
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Sign in to ColorKast</h1>
+          <h1 className="text-3xl">Sign in to ColorKast</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             Administrative access is restricted to authorized ABC Paint staff.
           </p>
         </div>
       </div>
 
-      <Card>
-        <CardHeader>
+      <Card className="overflow-hidden rounded-md py-0">
+        <div className="flex h-1.5">
+          <span className="h-full flex-1 bg-[#2e5c8a]" />
+          <span className="h-full flex-1 bg-[#c45c32]" />
+          <span className="h-full flex-1 bg-[#3d6b4e]" />
+          <span className="h-full flex-1 bg-[#e2b84a]" />
+        </div>
+        <CardHeader className="pt-5">
           <CardTitle className="text-base">Administrator sign in</CardTitle>
           <CardDescription>Use your staff credentials to access the Administration area.</CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="pb-5">
           <form onSubmit={handleSubmit} className="grid gap-4">
             {error && (
               <Alert variant="destructive">

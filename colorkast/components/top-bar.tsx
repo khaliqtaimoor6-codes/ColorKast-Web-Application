@@ -35,9 +35,17 @@ export function TopBar({
   const initials = user ? user.username.slice(0, 2).toUpperCase() : "?";
 
   return (
-    <header className="sticky top-0 z-10 flex h-14 shrink-0 items-center gap-3 border-b bg-background/80 px-4 backdrop-blur-sm">
+    <header className="sticky top-0 z-10 flex h-14 shrink-0 items-center gap-3 border-b bg-background/75 px-4 backdrop-blur-md">
       <SidebarTrigger className="-ml-1" />
-      <div className="flex-1" />
+      <div className="hidden h-2 flex-1 overflow-hidden rounded-sm sm:flex">
+        <span className="h-full w-[18%] bg-[#2e5c8a]" />
+        <span className="h-full w-[14%] bg-[#c45c32]" />
+        <span className="h-full w-[16%] bg-[#3d6b4e]" />
+        <span className="h-full w-[20%] bg-[#e2b84a]" />
+        <span className="h-full w-[12%] bg-[#6b3a96]" />
+        <span className="h-full w-[20%] bg-[#c8643c]" />
+      </div>
+      <div className="flex-1 sm:hidden" />
       {user ? (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
